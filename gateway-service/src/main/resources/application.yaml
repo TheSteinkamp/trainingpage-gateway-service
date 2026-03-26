@@ -7,22 +7,26 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: user-service
-          uri: lb://user-service
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
           predicates:
             - Path=/user/**
 
-        - id: training-service
-          uri: lb://training-service
+        - id: TRAINING-SERVICE
+          uri: lb://TRAINING-SERVICE
           predicates:
             - Path=/training/**
 
-        - id: statistics-service
-          uri: lb://statistics-service
+        - id: STATISTIC-SERVICE
+          uri: lb://STATISTIC-SERVICE
           predicates:
-            - Path=/statistics/**
+            - Path=/statistic/**
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
+    fetch-registry: true
+    register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka
