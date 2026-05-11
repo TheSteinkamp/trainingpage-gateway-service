@@ -15,7 +15,7 @@ spring:
         - id: TRAINING-SERVICE
           uri: lb://TRAINING-SERVICE
           predicates:
-            - Path=/training/**
+            - Path=/exercise/**, /training/**
 
         - id: STATISTIC-SERVICE
           uri: lb://STATISTIC-SERVICE
