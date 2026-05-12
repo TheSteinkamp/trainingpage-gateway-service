@@ -24,9 +24,13 @@ Service Discovery: Registering with Eureka and dynamically locating service inst
 ## Routing Logic
 
 The gateway routes requests based on the following path patterns:
+
 /user/** → User Service (Protected)
+
 /training/** → Training Service (Protected)
+
 /exercise/** → Training Service (Protected)
+
 /statistic/** → Statistic Service (Protected)
 
 ## Setup
